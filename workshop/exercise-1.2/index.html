@@ -1,7 +1,38 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <style></style>
+    <style>
+      body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px;
+        background-color: blue;
+        background-image: radial-gradient(
+          circle,
+          black 7%,
+          blue 65%,
+          lightblue 28%
+        );
+      }
+      .time-text {
+        color: white;
+        font-size: 45px;
+        position: absolute;
+        left: 15px;
+        top: 30px;
+      }
+      .time {
+        color: yellow;
+        font-size: 45px;
+      }
+      .result {
+        color: violet;
+        font-size: 75px;
+      }
+    </style>
   </head>
   <body>
     <p class="time-text">You have <span id="time"></span> seconds to click</p>
