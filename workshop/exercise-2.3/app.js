@@ -1,31 +1,16 @@
-// document.querySelectorAll("button").forEach(function (e) {
-//     e.addEventListener("click", function () {
-//     this.style.backgroundColor = "green";
-//     if (button !== "green") {
-//         color = "red";
-//         document.getElementById("button").style.backgroundColor = "color";
-//     else if (button === "green"){
-//         color = "red";
-//         document.getElementById("button).style.backgroundColor;
-//          }
-// }
-//     }
-// });
-//How would I solve this using my idea?
-
-let mainDiv = document.getElementById("main");
+const mainDiv = document.getElementById("main");
 
 function toggleColor(event) {
-  const buttonId = event.target.id;
-  document.getElementById(buttonId).classList.toggle("green");
+  console.log("click"); //just to make sure everything works
+  const theButton = document.getElementById(event.target.id); //this targets what you're touching
+  theButton.classList.toggle("dark-mode");
 }
 
-for (let i = 1; i <= 20; i++) {
+for (let number = 1; number <= 20; number++) {
   const button = document.createElement("button");
-  button.innerText = i;
-  button.style.top = `${Math.random() * 60}vh`;
-  button.style.left = `${Math.random() * 60}vw`;
-  mainDiv.appendChild(button);
-
+  button.innerText = number;
+  button.id = number;
+  button.classList.add("button");
   button.addEventListener("click", toggleColor);
+  mainDiv.appendChild(button);
 }
